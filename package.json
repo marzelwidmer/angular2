@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "Angular 2.0 Setup based on node and systemjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marzelwidmer/angular2TS.git"
+  },
+  "keywords": [
+    "Angular",
+    "2.0",
+    "setup"
+  ],
+  "author": "Marcel Widmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marzelwidmer/angular2TS/issues"
+  },
+  "homepage": "https://github.com/marzelwidmer/angular2TS#readme"
+}
