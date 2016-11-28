@@ -4,7 +4,7 @@ Create package.json
 
     npm init
 
-### InteliJ plugin 
+### IntelliJ plugin 
     LiveEdit
 
 ##Setup development dependecies
