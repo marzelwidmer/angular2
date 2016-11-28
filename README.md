@@ -107,3 +107,7 @@ _angular/router_
 
      npm run typings -- install dt~node --save --global
 
+## install _typings_ global _core-js_  definitions
+
+     npm run typings -- install dt~core-js --save --global
+
