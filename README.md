@@ -93,7 +93,7 @@ _angular/router_
     npm install @angular/router --save
 
 #Type Script 
-## add compiler configuration
+## add compiler configuration _tsconfig.json_
 
     npm run tsc -- -init
 
