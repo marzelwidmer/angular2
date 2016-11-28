@@ -156,3 +156,7 @@ Define app folder name and configure angular bundles and other libraries where t
     })(this);
     
 
+#Start lite-server
+
+    npm run start
+ 

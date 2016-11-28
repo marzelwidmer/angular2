@@ -4,7 +4,7 @@
   "description": "Angular 2.0 Setup based on node and systemjs",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite \""",
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite \"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "typings install",
     "tsc" : "tsc",
