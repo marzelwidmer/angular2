@@ -96,5 +96,13 @@ _angular/router_
 ## add compiler configuration _tsconfig.json_
 
     npm run tsc -- -init
+    
+    
+#Typings
+## add _typings.json_ configuration
+
+    npm run typings -- init 
+    
+
 
 
