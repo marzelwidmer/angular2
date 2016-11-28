@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "typings install",
     "tsc" : "tsc",
-    "typings": "typings"
+    "tsc:w" : "tsc -w",
+    "typings": "typings",
+    "lite": "lite-server"
   },
   "repository": {
     "type": "git",
