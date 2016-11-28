@@ -103,6 +103,7 @@ _angular/router_
 
     npm run typings -- init 
     
+## install _typings_ node global definitions
 
-
+     npm run typings -- install dt~node --save --global
 
