@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular2</title>
+
+    <!--poliyfills-->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <!--vendor-->
+    <script src="node_modules/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- load system.config.js -->
+    <script>
+      System.import('system.config.js').then(function () {
+        System.import('app');
+      }).catch(function (err) {
+        console.log(err);
+      })
+    </script>
+</head>
+<body>
+
+</body>
+</html>
