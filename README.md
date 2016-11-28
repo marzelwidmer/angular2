@@ -112,15 +112,24 @@ _angular/router_
      npm run typings -- install dt~core-js --save --global
 
 
-#Configuration _system-js_ with _system.config.js_
+#Configuration _system-js_ 
+## add _system.config.js_ configuration
+Alias path add _map_ to tell the system loader where to look for things. 
+Define app folder name and configure angular bundles and other libraries where to load the _umd_ files.
+
+
 
     (function (global) {
         System.config({
             paths: {
+                // paths server as alias
                 'npm:': 'node_modules/'
             },
+            // map tells the System loader where to look for things
             map: {
+                // our app is within th app folder
                 app: 'app',
+                // angular bundles
                 '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
                 '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
                 '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -129,8 +138,11 @@ _angular/router_
                 '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
                 '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
                 '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+                
+                 // other libraries
                 'rxjs': 'npm:rxjs'
             },
+            // packages tells the System loader how to load when no filename and/or no extension 
             packages: {
                 app: {
                     main: './main.js',
@@ -142,4 +154,5 @@ _angular/router_
             }
         });
     })(this);
+    
 
