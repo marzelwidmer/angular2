@@ -28,6 +28,7 @@ src/docs/asciidoc/*.tmp
 node
 node_modules
 typings
+*.js.map
 
 #OS meta files
 .DS_Store
