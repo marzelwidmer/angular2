@@ -24,9 +24,9 @@
   "author": "Marcel Widmer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marzelwidmer/angular2TS/issues"
+    "url": "https://github.com/marzelwidmer/angular2/issues"
   },
-  "homepage": "https://github.com/marzelwidmer/angular2TS#readme",
+  "homepage": "https://github.com/marzelwidmer/angular2#readme",
   "devDependencies": {
     "concurrently": "^3.1.0",
     "lite-server": "^2.2.2",
