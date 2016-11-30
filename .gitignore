@@ -28,7 +28,13 @@ src/docs/asciidoc/*.tmp
 node
 node_modules
 typings
-*.js.map
+
+#TypeScript
+app/**/*.js
+app/**/*.map
+
+
+
 
 #OS meta files
 .DS_Store
