@@ -1,0 +1,12 @@
+nav {
+    color: red;
+    font-size: smaller;
+}
+main {
+    padding: 5px;
+    margin: 5px;
+    background-color: #83e0FF;
+}
+footer {
+    font-size: smaller;
+}
