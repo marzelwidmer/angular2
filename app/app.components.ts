@@ -16,7 +16,8 @@ import {Component} from "@angular/core";
                 <footer>Fotter</footer>
     `
 })
-// Class
+
+// Export class AppComponent
 export class AppComponent {
 
     constructor() {
