@@ -9,6 +9,7 @@ import {BrowserModule} from "@angular/platform-browser";
 @NgModule({
     // Specifies a list of modules whose exported directives/pipes
     // should be available to templates in this module.
+    // BrowserModule provides services that are essential to launch and run a browser app.
     imports : [BrowserModule],
     // Specifies a list of directives/pipes that belong to this module.
     declarations: [AppComponent],
@@ -16,6 +17,7 @@ import {BrowserModule} from "@angular/platform-browser";
     // The components listed here will automatically be added to entryComponents.
     bootstrap: [AppComponent]
 })
+
 // Export Class AppModule
 export class AppModule {
 

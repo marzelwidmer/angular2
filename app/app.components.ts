@@ -20,6 +20,7 @@ import {Component} from "@angular/core";
 // Export class AppComponent
 export class AppComponent {
 
+    // Constructor
     constructor() {
         console.log("Hello from AppComponent");
     }
