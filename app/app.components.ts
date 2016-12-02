@@ -6,23 +6,34 @@ import {Component} from "@angular/core";
 // Decorator Component
 // Marks a class as an Angular component and collects component configuration metadata.
 @Component({
-    // The CSS selector that triggers the instantiation of a directive.
-    selector: 'app',
-    // Specifies an inline template for an Angular component.
-    // Only one of `templateUrl` or `template` can be defined per Component.
-    /*template: `
-                <nav>Navigation</nav>
-                <main>Main</main>
-                <footer>Fotter</footer>
-    `*/
-    templateUrl: './app/app.component.html'
+  // The CSS selector that triggers the instantiation of a directive.
+  selector: 'app',
+  // Specifies an inline template for an Angular component.
+  // Only one of `templateUrl` or `template` can be defined per Component.
+  /*template: `
+   <nav>Navigation</nav>
+   <main>Main</main>
+   <footer>Fotter</footer>
+   `*/
+  templateUrl: './app/app.component.html',
+  styles: [`
+        nav {
+            color: red;
+        }
+        main {
+            background-color: #83e0FF;
+        }
+        footer {
+            font-size: smaller;
+        }
+    `]
 })
 
 // Export class AppComponent
 export class AppComponent {
 
-    // Constructor
-    constructor() {
-        console.log("Hello from AppComponent");
-    }
+  // Constructor
+  constructor() {
+    console.log("Hello from AppComponent");
+  }
 }
