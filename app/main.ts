@@ -6,3 +6,4 @@ import {AppModule} from "./app.module";
 
 console.log("Bootstrap Angular Module");
 platformBrowserDynamic().bootstrapModule(AppModule);
+console.log("Hello Angular from main.ts bootstrap is finish.");
