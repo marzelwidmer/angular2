@@ -10,11 +10,12 @@ import {Component} from "@angular/core";
     selector: 'app',
     // Specifies an inline template for an Angular component.
     // Only one of `templateUrl` or `template` can be defined per Component.
-    template: `
+    /*template: `
                 <nav>Navigation</nav>
                 <main>Main</main>
                 <footer>Fotter</footer>
-    `
+    `*/
+    templateUrl: './app/app.component.html'
 })
 
 // Export class AppComponent
