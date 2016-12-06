@@ -4,16 +4,19 @@
 import {NgModule} from "@angular/core";
 import {AppComponent} from "./app.components";
 import {BrowserModule} from "@angular/platform-browser";
-import {UserComponent} from "./user/user.component";
+import {UserModule} from "./user/user.module";
 
 // Decorator NgModule interface
 @NgModule({
   // Specifies a list of modules whose exported directives/pipes
   // should be available to templates in this module.
   // BrowserModule provides services that are essential to launch and run a browser app.
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    UserModule
+  ],
   // Specifies a list of directives/pipes that belong to this module.
-  declarations: [AppComponent, UserComponent],
+  declarations: [AppComponent],
   // Defines the components that should be bootstrapped when this module is bootstrapped.
   // The components listed here will automatically be added to entryComponents.
   bootstrap: [AppComponent]
