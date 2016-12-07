@@ -5,13 +5,14 @@ import {Component} from "@angular/core";
   template: `
         <header innerText="{{username}}"></header>
         <p>
-        <img src="https://placekitten.com/g/64/64" alt="">
+        <img [src]="imgUrl " alt="">
         {{getDect()}}      
     `
 })
 
 export class UserComponent {
   username: String = "Marcel Widmer";
+  imgUrl:String = "https://placekitten.com/g/64/64";
 
   getSum(num1: number, num2: number): number {
     return num1 + num2;
