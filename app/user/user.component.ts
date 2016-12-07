@@ -4,23 +4,36 @@ import { Component } from "@angular/core";
     selector: 'user',
     styles: [
         `
-            .hide {
-                display: none
-            }
-            .img{
-                margin: 5px;
-                float: left; 
-            }
-        `
+        header {
+            margin-bottom: 15px;
+        }
+        .hide {
+            display: none;
+        }
+        .img {
+            margin-right: 5px;
+            float: left;
+        }
+        button {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+`
     ],
     template: `
-        <header innerText="{{username}}"></header>
-        <p>
-        <img [src]="imgUrl " class="img" [class.hide]="username!='Marcel Widmer'" [attr.aria-label]="myImageLable">
-        <button [attr.disabled]="disabled">Test</button>
-        
+<section>
+    <header innerText="{{username}}"></header>
+<div>
+    <img [src]="imgUrl " class="img" [class.hide]="username!='Marcel Widmer'" [attr.aria-label]="myImageLable">
+    <div>
         {{getDect()}}      
-    `
+    </div>    
+</div>
+    <button [attr.disabled]="disabled" (click)="onClick($event)" >Ready to click</button>
+    <input type="text" (keydown)="onKeydown($event)">
+</section>`
 })
 
 export class UserComponent {
@@ -28,6 +41,14 @@ export class UserComponent {
     imgUrl: String = "https://placekitten.com/g/64/64";
     myImageLable: String = "Katzenbild";
     disabled: any = null; // true
+
+    onKeydown( evt:Event): void {
+        console.log('Keydown', evt)
+    }
+    onClick( evt:Event): void {
+        this.disabled = true;
+        console.log('clicked', evt)
+    }
 
     getSum(num1: number, num2: number): number {
         return num1 + num2;
