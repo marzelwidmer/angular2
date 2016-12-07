@@ -16,7 +16,9 @@ import { Component } from "@angular/core";
     template: `
         <header innerText="{{username}}"></header>
         <p>
-        <img [src]="imgUrl " class="img" [class.hide]="username!='Marcel Widmer'">
+        <img [src]="imgUrl " class="img" [class.hide]="username!='Marcel Widmer'" [attr.aria-label]="myImageLable">
+        <button [attr.disabled]="disabled">Test</button>
+        
         {{getDect()}}      
     `
 })
@@ -24,7 +26,8 @@ import { Component } from "@angular/core";
 export class UserComponent {
     username: String = "Marcel Widmer";
     imgUrl: String = "https://placekitten.com/g/64/64";
-    isHidden: boolean = true;
+    myImageLable: String = "Katzenbild";
+    disabled: any = null; // true
 
     getSum(num1: number, num2: number): number {
         return num1 + num2;
