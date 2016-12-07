@@ -3,17 +3,10 @@ import {Component} from "@angular/core";
 @Component({
   selector: 'user',
   template: `
-    <section>
-        <header>
-         {{username}}   
-        </header>
+        <header innerText="{{username}}"></header>
         <p>
-        {{getDect()}}
-        </p>
-        <p>
-            {{getSum(1,9)}}
-        </p>      
-    </section>
+        <img src="https://placekitten.com/g/64/64" alt="">
+        {{getDect()}}      
     `
 })
 
@@ -25,8 +18,9 @@ export class UserComponent {
   }
 
   getDect(): string {
-    return 'Visitors, powers, and crystal winds will always protect them. ' +
-      'Nunquam imitari contencio.Pol.Ubi est domesticus frondator Desolation is a warm dagger.';
+    return `Messor gratis galatae est.Velox imbers ducunt ad fuga.Est fortis lixa, cesaris.Aususs assimilant in lentia!
+      Musa emeritis abaculus est.Racanas tolerare, tanquam rusticus equiso.Sunt vigiles magicae nobilis, salvus fraticinidaes.
+      Lumens peregrinatione, tanquam alter zirbus. Omnia moris, tanquam brevis uria.Cur xiphias studere?Ollas congregabo in lutetia!
+      Camerarius repressor satis carpseriss armarium est.Heu.Vae. Canis de albus abactus, fallere sensorem!Clabulares studere in brevis tornacum!`;
   }
-
 }
