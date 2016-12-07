@@ -2,10 +2,21 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'user',
+    styles: [
+        `
+            .hide {
+                display: none
+            }
+            .img{
+                margin: 5px;
+                float: left; 
+            }
+        `
+    ],
     template: `
         <header innerText="{{username}}"></header>
         <p>
-        <img [src]="imgUrl " alt="" [style.margin.px]="margin" [style.float]="float">
+        <img [src]="imgUrl " class="img" [class.hide]="username!='Marcel Widmer'">
         {{getDect()}}      
     `
 })
@@ -13,8 +24,7 @@ import { Component } from "@angular/core";
 export class UserComponent {
     username: String = "Marcel Widmer";
     imgUrl: String = "https://placekitten.com/g/64/64";
-    float: String = "left";
-    margin: number = 5;
+    isHidden: boolean = true;
 
     getSum(num1: number, num2: number): number {
         return num1 + num2;
