@@ -1,5 +1,8 @@
 <nav>Navigation</nav>
 <main>
-    <user [username]="username" [img]="imgUrl" (choice)="selected($event)"></user>
+    <user *ngFor="let usr of userList"
+          [userObj] = "usr"
+          (choice)="selected($event)">
+    </user>
 </main>
 <footer>Footer</footer>

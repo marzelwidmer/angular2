@@ -4,6 +4,7 @@
  * Created by marcelwidmer on 30.11.16.
  */
 import { Component } from "@angular/core";
+import { IUserVO, userData } from './user/user.data';
 
 // Decorator Component
 // Marks a class as an Angular component and collects component configuration metadata.
@@ -19,15 +20,14 @@ import { Component } from "@angular/core";
 // Export class AppComponent
 export class AppComponent {
 
-    username: String = "Marcel Widmer";
-    imgUrl: String = "https://placekitten.com/g/96/96";
+    userList: IUserVO[] = userData;
 
     // Constructor
     constructor() {
-        console.log("Hello from AppComponent with initial username " + this.username);
+        console.log("Hello from AppComponent" );
     }
 
-    selected(evt: Event) {
-        console.log('user selected', evt)
+    selected(selectedUsr: IUserVO) {
+        console.log('user selected', selectedUsr)
     }
 }

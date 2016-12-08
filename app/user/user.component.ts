@@ -1,4 +1,5 @@
 import { Input, Component, Output, EventEmitter } from '@angular/core';
+import { IUserVO } from './user.data';
 @Component({
     selector: 'user',
     styles: [
@@ -23,61 +24,37 @@ import { Input, Component, Output, EventEmitter } from '@angular/core';
     ],
     template: `
 <section>
-    <header innerText="{{username}}"></header>
+    <header innerText="{{usr.name}}"></header>
 <div>
-        
-     <!--
-     <template [ngIf]="imgUrl">
-        <img [src]="imgUrl" class="img" [attr.aria-label]="myImageLable">
-     </template>
-     -->
      
-    <img [src]="imgUrl" *ngIf="imgUrl"  class="img" [attr.aria-label]="myImageLable">
-    
+    <img src="img/{{usr.id}}.jpg" alt="" class="img" [attr.aria-label]="label" *ngIf="usr.id">
+ 
     <div>
         {{getDect()}}      
     </div>    
 </div>
-    <button [attr.disabled]="disabled" (mouseover)="myMouseOver($event)" (click)="myOnClick($event)">Select</button>
-    <input type="text" (keydown)="onKeydown($event)">
+    <button [attr.disabled]="disabled" (click)="onClick($event)">Select</button>
 </section>`
 })
 
 export class UserComponent {
-    @Input()
-    username: String;
+
+    @Input('userObj')
+    usr: IUserVO;
 
     @Output()
-    choice: EventEmitter<String> = new EventEmitter<String>();
+    choice: EventEmitter<IUserVO> = new EventEmitter<IUserVO>();
 
-    @Input(`img`)
-    imgUrl: String
 
-    myImageLable: String = "Katzenbild";
+    label: String = "Katzenbild";
     disabled: any = null; // true
 
-    onKeydown(evt: Event): void {
-        console.log('Keydown', evt)
-    }
-
-    myOnClick(evt: Event): void {
+    onClick(evt: Event): void {
         this.disabled = true;
-        this.choice.emit(this.username)
-        console.log('myOnClicke event', evt)
-    }
-    myMouseOver(evt: Event): void {
-        this.choice.emit(this.username)
-        console.log('myMouseOver event', evt)
+        this.choice.emit(this.usr);
     }
 
-    getSum(num1: number, num2: number): number {
-        return num1 + num2;
-    }
-
-    getDect(): string {
-        return `Messor gratis galatae est.Velox imbers ducunt ad fuga.Est fortis lixa, cesaris.Aususs assimilant in lentia!
-      Musa emeritis abaculus est.Racanas tolerare, tanquam rusticus equiso.Sunt vigiles magicae nobilis, salvus fraticinidaes.
-      Lumens peregrinatione, tanquam alter zirbus. Omnia moris, tanquam brevis uria.Cur xiphias studere?Ollas congregabo in lutetia!
-      Camerarius repressor satis carpseriss armarium est.Heu.Vae. Canis de albus abactus, fallere sensorem!Clabulares studere in brevis tornacum!`;
+    getDect(): String {
+        return this.usr.desc;
     }
 }
