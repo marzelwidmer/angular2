@@ -1,4 +1,6 @@
 /**
+ * Root Main Component
+ *
  * Created by marcelwidmer on 30.11.16.
  */
 import {Component} from "@angular/core";
@@ -17,8 +19,10 @@ import {Component} from "@angular/core";
 // Export class AppComponent
 export class AppComponent {
 
+  username:String = "Marcel Widmer";
+
   // Constructor
   constructor() {
-    console.log("Hello from AppComponent");
+    console.log("Hello from AppComponent with intitial username " + this.username );
   }
 }
