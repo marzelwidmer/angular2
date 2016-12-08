@@ -1,5 +1,4 @@
-
-import { Input, Component } from '@angular/core';
+import { Input, Component, Output, EventEmitter } from '@angular/core';
 @Component({
     selector: 'user',
     styles: [
@@ -31,7 +30,7 @@ import { Input, Component } from '@angular/core';
         {{getDect()}}      
     </div>    
 </div>
-    <button [attr.disabled]="disabled" (click)="onClick($event)" >Ready to click</button>
+    <button [attr.disabled]="disabled" (mouseover)="myMouseOver($event)" (click)="myOnClick($event)">Select</button>
     <input type="text" (keydown)="onKeydown($event)">
 </section>`
 })
@@ -40,16 +39,26 @@ export class UserComponent {
     @Input()
     username: String;
 
+    @Output()
+    choice: EventEmitter<any> = new EventEmitter();
+
     imgUrl: String = "https://placekitten.com/g/64/64";
     myImageLable: String = "Katzenbild";
     disabled: any = null; // true
 
-    onKeydown( evt:Event): void {
+    onKeydown(evt: Event): void {
         console.log('Keydown', evt)
     }
-    onClick( evt:Event): void {
+
+    myOnClick(evt: Event): void {
         this.disabled = true;
-        console.log('clicked', evt)
+        this.choice.emit(this.username)
+        console.log('myOnClicke event', evt)
+    }
+    myMouseOver(evt: Event): void {
+        this.disabled = true;
+        this.choice.emit(this.username)
+        console.log('myMouseOver event', evt)
     }
 
     getSum(num1: number, num2: number): number {
