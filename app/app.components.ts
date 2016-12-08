@@ -20,6 +20,7 @@ import { Component } from "@angular/core";
 export class AppComponent {
 
     username: String = "Marcel Widmer";
+    imgUrl: String = "https://placekitten.com/g/96/96";
 
     // Constructor
     constructor() {

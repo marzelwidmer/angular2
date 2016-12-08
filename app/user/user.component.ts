@@ -25,7 +25,8 @@ import { Input, Component, Output, EventEmitter } from '@angular/core';
 <section>
     <header innerText="{{username}}"></header>
 <div>
-    <img [src]="imgUrl " class="img" [class.hide]="username!='Marcel Widmer'" [attr.aria-label]="myImageLable">
+    <img [src]="imgUrl" *ngIf="imgUrl"  class="img" [class.hide]="username!='Marcel Widmer'" [attr.aria-label]="myImageLable">
+    
     <div>
         {{getDect()}}      
     </div>    
@@ -42,7 +43,9 @@ export class UserComponent {
     @Output()
     choice: EventEmitter<String> = new EventEmitter<String>();
 
-    imgUrl: String = "https://placekitten.com/g/64/64";
+    @Input(`img`)
+    imgUrl: String
+
     myImageLable: String = "Katzenbild";
     disabled: any = null; // true
 
