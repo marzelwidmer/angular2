@@ -40,7 +40,7 @@ export class UserComponent {
     username: String;
 
     @Output()
-    choice: EventEmitter<any> = new EventEmitter();
+    choice: EventEmitter<String> = new EventEmitter<String>();
 
     imgUrl: String = "https://placekitten.com/g/64/64";
     myImageLable: String = "Katzenbild";
@@ -56,7 +56,6 @@ export class UserComponent {
         console.log('myOnClicke event', evt)
     }
     myMouseOver(evt: Event): void {
-        this.disabled = true;
         this.choice.emit(this.username)
         console.log('myMouseOver event', evt)
     }
