@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
 
+import { Input, Component } from '@angular/core';
 @Component({
     selector: 'user',
     styles: [
@@ -37,7 +37,9 @@ import { Component } from "@angular/core";
 })
 
 export class UserComponent {
-    username: String = "Marcel Widmer";
+    @Input()
+    username: String;
+
     imgUrl: String = "https://placekitten.com/g/64/64";
     myImageLable: String = "Katzenbild";
     disabled: any = null; // true

@@ -17,6 +17,8 @@ import {Component} from "@angular/core";
 // Export class AppComponent
 export class AppComponent {
 
+  username:String = "Marcel Widmer";
+
   // Constructor
   constructor() {
     console.log("Hello from AppComponent");
