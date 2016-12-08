@@ -25,7 +25,14 @@ import { Input, Component, Output, EventEmitter } from '@angular/core';
 <section>
     <header innerText="{{username}}"></header>
 <div>
-    <img [src]="imgUrl" *ngIf="imgUrl"  class="img" [class.hide]="username!='Marcel Widmer'" [attr.aria-label]="myImageLable">
+        
+     <!--
+     <template [ngIf]="imgUrl">
+        <img [src]="imgUrl" class="img" [attr.aria-label]="myImageLable">
+     </template>
+     -->
+     
+    <img [src]="imgUrl" *ngIf="imgUrl"  class="img" [attr.aria-label]="myImageLable">
     
     <div>
         {{getDect()}}      
