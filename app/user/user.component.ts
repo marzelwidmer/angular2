@@ -52,7 +52,7 @@ import { IUserVO } from './user.data';
             <i *ngSwitchCase="'Edu'">book</i>
             <i *ngSwitchCase="'Des'">dashboard</i>
             <i *ngSwitchDefault>rowing</i>
-        </span> 
+        </span>
         {{getDect()}}      
     </div>    
 </div>
