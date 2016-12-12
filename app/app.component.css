@@ -1,12 +1,26 @@
 nav {
-    color: red;
-    font-size: smaller;
-}
-main {
     padding: 5px;
     margin: 5px;
-    background-color: #83e0FF;
+}
+
+nav svg {
+    width: 96px;
+    float: left;
+
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+main {
+    clear: both;
 }
 footer {
     font-size: smaller;
+}
+
+user {
+    padding: 5px;
+    margin: 5px;
+    background-color: #a5d7f2;
+    display: block;
 }
