@@ -74,9 +74,10 @@
 		  [ngClass]="{'active': usr===selectedUsr}"
 		  [ngStyle]="{'margin': margin + 'px'}"
 		  myItalic
-		  [myColor]="myColor"
+		  myColor="{{usr===selectedUsr ? 'red' : 'black'}}"
 
 	>
+		<!--  [myColor]="myColor" -->
     </user>
 </main>
 <footer>Footer</footer>
