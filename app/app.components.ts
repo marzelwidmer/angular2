@@ -24,6 +24,7 @@ export class AppComponent {
     selectedUsr: IUserVO;
     //userClasses: String =  "active italic";
     margin: number = 5;
+    myColor:String = "red";
 
 
     // Constructor
