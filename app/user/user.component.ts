@@ -72,7 +72,7 @@ export class UserComponent {
     disabled: any = null; // true
 
     onClick(evt: Event): void {
-        this.disabled = true;
+        //this.disabled = true;
         this.choice.emit(this.usr);
     }
 

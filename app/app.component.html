@@ -2,7 +2,9 @@
     <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 245 320" style="enable-background:new 0 0 245 320;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#009FE3;}
+	.st0 {
+        fill: #009FE3;
+    }
 </style>
 <g>
 	<path class="st0" d="M85.6,297c0-6.7-1.8-11.6-5.3-15c-3.6-3.4-8.5-5-14.9-5c-2.7,0-5.4,0.4-7.9,1.3c-2.6,0.9-4.9,2.2-6.9,3.9
@@ -67,8 +69,11 @@
 
 <main>
     <user *ngFor="let usr of userList"
-          [userObj] = "usr"
-          (choice)="selected($event)">
+          [userObj]="usr"
+          (choice)="selected($event)"
+          [ngClass]="{'active': usr===selectedUsr, italic:true}"
+
+    >
     </user>
 </main>
 <footer>Footer</footer>

@@ -24,3 +24,9 @@ user {
     background-color: #a5d7f2;
     display: block;
 }
+user.active {
+    background-color: #89afca;
+}
+user.italic {
+    font-style: italic;
+}

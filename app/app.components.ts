@@ -21,13 +21,15 @@ import { IUserVO, userData } from './user/user.data';
 export class AppComponent {
 
     userList: IUserVO[] = userData;
+    selectedUsr: IUserVO;
 
     // Constructor
     constructor() {
-        console.log("Hello from AppComponent" );
+        console.log("Hello from AppComponent");
     }
 
     selected(selectedUsr: IUserVO) {
-        console.log('user selected', selectedUsr)
+        console.log('user selected', selectedUsr);
+        this.selectedUsr = selectedUsr;
     }
 }
