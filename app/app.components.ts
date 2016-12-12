@@ -22,6 +22,9 @@ export class AppComponent {
 
     userList: IUserVO[] = userData;
     selectedUsr: IUserVO;
+    //userClasses: String =  "active italic";
+    margin: number = 5;
+
 
     // Constructor
     constructor() {

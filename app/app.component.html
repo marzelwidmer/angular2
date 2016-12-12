@@ -71,9 +71,9 @@
     <user *ngFor="let usr of userList"
           [userObj]="usr"
           (choice)="selected($event)"
-          [ngClass]="{'active': usr===selectedUsr, italic:true}"
-
-    >
+		  [ngClass]="{'active': usr===selectedUsr, italic:true}"
+		  [ngStyle]="{'margin': margin + 'px'}"
+	>
     </user>
 </main>
 <footer>Footer</footer>
