@@ -5,6 +5,7 @@ import {NgModule} from "@angular/core";
 import {AppComponent} from "./app.components";
 import {BrowserModule} from "@angular/platform-browser";
 import {UserModule} from "./user/user.module";
+import { UtilsModule } from './utils/utils.module';
 
 // Decorator NgModule interface
 @NgModule({
@@ -13,7 +14,8 @@ import {UserModule} from "./user/user.module";
   // BrowserModule provides services that are essential to launch and run a browser app.
   imports: [
     BrowserModule,
-    UserModule
+    UserModule,
+    UtilsModule
   ],
   // Specifies a list of directives/pipes that belong to this module.
   declarations: [AppComponent],

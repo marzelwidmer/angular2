@@ -71,8 +71,10 @@
     <user *ngFor="let usr of userList"
           [userObj]="usr"
           (choice)="selected($event)"
-		  [ngClass]="{'active': usr===selectedUsr, italic:true}"
+		  [ngClass]="{'active': usr===selectedUsr}"
 		  [ngStyle]="{'margin': margin + 'px'}"
+		  myItalic
+
 	>
     </user>
 </main>
