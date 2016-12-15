@@ -20,6 +20,10 @@ import { IUserVO, userData } from './user/user.data';
 // Export class AppComponent
 export class AppComponent {
 
+    num1: number = 100000.1234;
+    num2: number = 3.14159;
+    dat: number = Date.now();
+
     userList: IUserVO[] = userData;
     selectedUsr: IUserVO;
     //userClasses: String =  "active italic";

@@ -1,4 +1,12 @@
 <nav>
+    <ul>
+        <li>num1 (3.1-3): {{num1 | number: '3.1-3'}} - {{num1}}</li>
+        <li>num2 (3.4-5): {{num2 | number: '3.4-5'}} - {{num2}}</li>
+        <li>dat ('longDate'): {{dat | date: 'longDate'}}</li>
+        <li>dat ('shortDate'): {{dat | date: 'shortDate'}}</li>
+        <li>dat ('shortDate'): {{dat | date: 'yMMMdjms'}}</li>
+    </ul>
+
     <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 245 320" style="enable-background:new 0 0 245 320;" xml:space="preserve">
 <style type="text/css">
@@ -64,20 +72,19 @@
 		c0,0-9,1.2-8.5,10.3l1.5,26.3C4.4,50.4,5.8,50.1,7.3,50.1"/>
 </g>
 </svg>
-
 </nav>
 
 <main>
     <user *ngFor="let usr of userList"
           [userObj]="usr"
           (choice)="selected($event)"
-		  [ngClass]="{'active': usr===selectedUsr}"
-		  [ngStyle]="{'margin': margin + 'px'}"
-		  myItalic
-		  myColor="{{usr===selectedUsr ? 'red' : 'black'}}"
+          [ngClass]="{'active': usr===selectedUsr}"
+          [ngStyle]="{'margin': margin + 'px'}"
+          myItalic
+          myColor="{{usr===selectedUsr ? 'red' : 'black'}}"
 
-	>
-		<!--  [myColor]="myColor" -->
+    >
+        <!--  [myColor]="myColor" -->
     </user>
 </main>
 <footer>Footer</footer>

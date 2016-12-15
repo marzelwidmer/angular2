@@ -53,7 +53,7 @@ import { IUserVO } from './user.data';
             <i *ngSwitchCase="'Des'">dashboard</i>
             <i *ngSwitchDefault>rowing</i>
         </span>
-        {{getDect()}}      
+        {{ getDect()  | slice : 0 : 90 | uppercase }}      
     </div>    
 </div>
     <button [attr.disabled]="disabled" (click)="onClick($event)">Select</button>
