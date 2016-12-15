@@ -75,7 +75,7 @@
 </nav>
 
 <main>
-    <user *ngFor="let usr of userList"
+    <user *ngFor="let usr of userList | reverse"
           [userObj]="usr"
           (choice)="selected($event)"
           [ngClass]="{'active': usr===selectedUsr}"

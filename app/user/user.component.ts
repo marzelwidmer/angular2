@@ -2,6 +2,7 @@ import { Input, Component, Output, EventEmitter } from '@angular/core';
 import { IUserVO } from './user.data';
 
 @Component({
+    moduleId: module.id,
     selector: 'user',
     styles: [
         `
