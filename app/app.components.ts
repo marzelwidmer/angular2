@@ -5,6 +5,7 @@
  */
 import { Component } from "@angular/core";
 import { IUserVO, userData } from './user/user.data';
+import { UserService } from './user/user.service';
 
 // Decorator Component
 // Marks a class as an Angular component and collects component configuration metadata.
@@ -31,14 +32,28 @@ export class AppComponent {
     margin: number = 5;
     myColor: String = "red";
 
+    //private userService:UserService;
 
     // Constructor
-    constructor() {
+    constructor(private userService: UserService) {
+        // this.userService = userService;
+
+        let lastSelected: IUserVO = this.userService.getSelectedUsr();
+        if (lastSelected) {
+            this.selectedUsr = this.userList.find((value) => {
+                return value.id === lastSelected.id;
+            });
+
+        }
+
+
         console.log("Hello from AppComponent");
     }
 
     selected(selectedUsr: IUserVO) {
         console.log('user selected', selectedUsr);
         this.selectedUsr = selectedUsr;
+        this.userService.setSelectedUsr(selectedUsr);
+
     }
 }
