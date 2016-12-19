@@ -2,6 +2,7 @@ import {NgModule} from "@angular/core";
 import {UserComponent} from "./user.component";
 import {CommonModule} from "@angular/common";
 import { UserService } from './user.service';
+import { UserDataService } from './user.data';
 
 @NgModule({
   imports: [CommonModule],
@@ -11,7 +12,7 @@ import { UserService } from './user.service';
   // of any component that is part of an Angular module
   // that imports this Angular module.
   exports: [UserComponent],
-  providers: [UserService]
+  providers: [UserService, UserDataService]
 })
 
 // Shared Module

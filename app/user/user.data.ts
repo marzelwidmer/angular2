@@ -7,7 +7,7 @@ export interface IUserVO {
     phone: String;
 }
 
-export let userData: IUserVO[] = [
+let userData: IUserVO[] = [
     {
         "id": "us",
         "name": "Saban Ünlü",
@@ -81,3 +81,10 @@ export let userData: IUserVO[] = [
         "desc": "'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, adipisci aperiam autem beatae dolorum eveniet laboriosam nam obcaecati odit officia optio.'"
     }
 ];
+
+export class UserDataService {
+
+    getUserList():IUserVO[]{
+        return userData;
+    }
+}

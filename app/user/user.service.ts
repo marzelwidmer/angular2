@@ -1,8 +1,14 @@
-import { IUserVO } from './user.data';
+import { IUserVO, UserDataService } from './user.data';
+import { Injectable } from '@angular/core';
 /**
  * Created by marcelwidmer on 19.12.16.
  */
+@Injectable()
 export class UserService {
+
+    constructor(private userDataService: UserDataService){
+
+    }
 
     /**
      *
@@ -20,4 +26,7 @@ export class UserService {
          return <IUserVO> JSON.parse(localStorage.getItem('selected'));
      }
 
+     getUserList():IUserVO[]{
+        return this.userDataService.getUserList();
+     }
 }

@@ -4,7 +4,7 @@
  * Created by marcelwidmer on 30.11.16.
  */
 import { Component } from "@angular/core";
-import { IUserVO, userData } from './user/user.data';
+import { IUserVO } from './user/user.data';
 import { UserService } from './user/user.service';
 
 // Decorator Component
@@ -26,18 +26,16 @@ export class AppComponent {
     num2: number = 3.14159;
     dat: number = Date.now();
 
-    userList: IUserVO[] = userData;
+    userList: IUserVO[];
     selectedUsr: IUserVO;
     //userClasses: String =  "active italic";
     margin: number = 5;
     myColor: String = "red";
 
-    //private userService:UserService;
 
     // Constructor
     constructor(private userService: UserService) {
-        // this.userService = userService;
-
+        this.userList = this.userService.getUserList();
         let lastSelected: IUserVO = this.userService.getSelectedUsr();
         if (lastSelected) {
             this.selectedUsr = this.userList.find((value) => {
